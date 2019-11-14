@@ -12,5 +12,13 @@
 */
 
 Route::get('/','IndexController@index');
-    
+Route::get('/cronometragem','CronometragemController@index');
+
+
+//Crud's
+Route::resource('operacao','OperacaoController');   
+Route::resource('produto','ProdutoController'); 
+Route::resource('usuario','UsuarioController'); 
+Route::resource('sequencia','SequenciaController');
+Route::resource('tomada-tempo','TomadaTempoController'); 
 

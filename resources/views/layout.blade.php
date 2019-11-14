@@ -33,7 +33,7 @@
 
         <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-            <a class="navbar-brand mr-1" href="index.html">SystemCrono</a>
+            <a class="navbar-brand mr-1" href="{{url('/')}}">SystemCrono</a>
 
             <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
                 <i class="fas fa-bars"></i>
@@ -68,7 +68,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="pagesDropdown">
                         <a class="dropdown-item" href="cadastroproduto.html">Cadastro</a>
-                        <a class="dropdown-item" href="listarproduto.html">Listar</a>
+                        <a class="dropdown-item" href="{{url('/')}}/produto">Listar</a>
 
                     </div>
                 </li>
@@ -95,51 +95,24 @@
 
             </ul>
 
-            <div id="content-wrapper">
+            <div class="container-fluid"> 
+                
+                <!--Conteudo da Pagina-->
+                
+                @yield('conteudo')
 
 
-                &nbsp;&nbsp;
+                <div>
 
-                <center>
-                    <div id="cronometro">
-
-                        <div id="reloj">00 : 00 : 00</div>
-                        <form name="cron" action="#">
-                            <input type="button" value="Iniciar" name="empieza" />
-                            <input type="button" value="Parar" name="para" /><br/>
-                            <input type="button" value="Continuar" name="continua" />
-                            <input type="button" value="Reiniciar" name="reinicia" />               
-                            </br></br>
-                            <input style="background-color: #17a2b8" type="button"  value="Próximo >>" name="proximo" />               
-                        </form>
-
-
-                    </div>
-
-                    </br></br>
-                    <table width="60%" border="4">
-                        <thead>                  
-                        <td>Nº Cronômetro</td>
-                        <td>Elemento</td>
-                        <td>Tempo</td>
-
-                        </thead>
-                        <tbody id="corpoTabela"></tbody>
-                    </table>
-                </center>
-                <div class="container-fluid">
-                    <div>
-
-                        <!-- Sticky Footer -->
-                        <footer class="sticky-footer">
-                            <div class="container my-auto">
-                                <div class="copyright text-center my-auto">
-                                    <span>SystemCrono Website 2019</span>
-                                </div>
+                    <!-- Sticky Footer -->
+                    <footer class="sticky-footer">
+                        <div class="container my-auto">
+                            <div class="copyright text-center my-auto">
+                                <span>SystemCrono Website 2019</span>
                             </div>
-                        </footer>
+                        </div>
+                    </footer>
 
-                    </div>
                 </div>
             </div>
 
