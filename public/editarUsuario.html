@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Registrar usuário</title>
+  <title>Editar usuário</title>
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -31,9 +31,13 @@
     <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
       <i class="fas fa-bars"></i>
     </button>
-    
+
+   
+
   </nav>
+
   <div id="wrapper">
+
     <!-- Sidebar -->
     <ul class="sidebar navbar-nav">
   
@@ -44,9 +48,12 @@
         </a> <div class="dropdown-menu" aria-labelledby="pagesDropdown">
           <a class="dropdown-item" href="login.html">Fazer login</a> 
           <a class="dropdown-item" href="register.html">Cadastrar usuário</a>
-          <a class="dropdown-item" href="listarEditarUsuario.html">Listar/Editar</a>       
+          <a class="dropdown-item" href="listarEditarUsuario.html">Listar/Editar</a>
+          
+        
         </div>
-      </li>     
+      </li>
+      
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-fw fa-shopping-cart"></i>
@@ -76,25 +83,33 @@
           <i class="fas fa-clipboard"></i>
            <span>Relatórios</span>
         </a>
-      </li>    
+      </li>
+      
+     
     </ul>
-    <div id="content-wrapper">  
+
+    <div id="content-wrapper">
+   
+
 &nbsp;&nbsp;
 <div class="text-center" > 
             
             <div class="container">
-                <div class="card card-register mx-auto mt-5">
-                    <div class="card-header" style="font-size: x-large">Registrar uma Conta</div>
+                <div class="card card-register mx-auto mt-5" style="font-size: larger">
+                    <div class="card-header" style="font-size: x-large">Editar usuário</div>
                     <div class="card-body">
                         <form>
                             <div class="form-group">
                                 <div class="form-row">
                                     <div class="col-md-12">
-                                        <label for="nome">Nome</label>
-                                            <input type="text" id="nome" class="form-control" placeholder="digite o nome" required="required" autofocus="autofocus">                                  
-                                    </div></br>                                   
+                                        <div class="form-label-group">
+                                            <input type="text" id="firstName" class="form-control" placeholder="Primeiro nome" required="required" autofocus="autofocus">
+                                            <label for="firstName">Nome</label>
+                                        </div>
+                                    </div>                                  
                                 </div>
-                            </div>                           
+                            </div>
+                           
                             <div class="form-group">
                                 <div class="form-row">
                                     <div class="col-md-6">
@@ -105,17 +120,20 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-label-group">
-                                            <input type="password" id="confirmPassword" class="form-control" placeholder="confirme a senha" required="required">
+                                            <input type="password" id="confirmPassword" class="form-control" placeholder="Confirm password" required="required">
                                             <label for="confirmPassword">Confirme a senha</label>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <a class="btn btn-primary btn-block" href="login.html">Salvar</a>
-                        </form>                      
+                        </form>
+                       
                     </div>
                 </div>
             </div>
+
+
       <div class="container-fluid">
 
         <!-- Icon Cards-->
@@ -130,9 +148,15 @@
           </div>
         </div>
       </footer>
+
     </div>
-    <!-- /.content-wrapper --
+    <!-- /.content-wrapper -->
+
   </div>
+  
+
+  
+
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
