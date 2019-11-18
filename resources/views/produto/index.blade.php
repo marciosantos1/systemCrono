@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('conteudo')
-
+&nbsp;&nbsp;
 <!-- Tabela de listar -->
                     <div class="card mb-3">
                         <div class="card-header">
