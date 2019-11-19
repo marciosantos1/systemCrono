@@ -67,7 +67,7 @@
                         <span>Produtos</span>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-                        <a class="dropdown-item" href="{{url('/')}}/produto">Cadastro</a>
+                        <a class="dropdown-item" href="{{url('/')}}/produto/create">Cadastro</a>
                         <a class="dropdown-item" href="{{url('/')}}/produto">Listar</a>
 
                     </div>

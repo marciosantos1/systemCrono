@@ -20,7 +20,7 @@
                                         <tr>
                                             <th>10</th>
                                             <th>Camisa polo</th>
-                                            <th><a href="editarProduto.html?cod=5" class="btn btn-primary">Editar</a>
+                                            <th><a href="{{url('/')}}/produto/1/edit" class="btn btn-primary">Editar</a>
                                                 <a href="" class="btn btn-danger">Excluir</a></th>
                                         </tr>
 
@@ -28,13 +28,13 @@
                                         <tr>
                                             <th>12</th>
                                             <th>Calça</th>
-                                            <th><a href="" class="btn btn-primary">Editar</a>
+                                            <th><a href="{{url('/')}}/produto/1/edit" class="btn btn-primary">Editar</a>
                                                 <a href="" class="btn btn-danger">Excluir</a></th>
                                         </tr>
                                         <tr>
                                             <th>13</th>
                                             <th>Camisa polo</th>
-                                            <th><a href="" class="btn btn-primary">Editar</a>
+                                            <th><a href="{{url('/')}}/produto/1/edit" class="btn btn-primary">Editar</a>
                                                 <a href="" class="btn btn-danger">Excluir</a></th>
                                         </tr>
 
