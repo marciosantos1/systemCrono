@@ -13,7 +13,7 @@ class TomadaTempoController extends Controller
      */
     public function index()
     {
-        //
+        return view('tomada-de-tempo.index');
     }
 
     /**

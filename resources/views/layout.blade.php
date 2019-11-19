@@ -53,9 +53,9 @@
                         <i class="fas fa-fw fa-user-circle"></i>
                         <span>Usuário</span>
                     </a> <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-                        <a class="dropdown-item" href="login.html">Fazer login</a> 
-                        <a class="dropdown-item" href="register.html">Cadastrar usuário</a>
-                        <a class="dropdown-item" href="listarEditarUsuario.html">Listar/Editar</a>
+                        <a class="dropdown-item" href="{{url('/')}}/usuario">Fazer login</a> 
+                        <a class="dropdown-item" href="{{url('/')}}/usuario">Cadastrar usuário</a>
+                        <a class="dropdown-item" href="{{url('/')}}/usuario">Listar/Editar</a>
 
 
                     </div>
@@ -67,7 +67,7 @@
                         <span>Produtos</span>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-                        <a class="dropdown-item" href="cadastroproduto.html">Cadastro</a>
+                        <a class="dropdown-item" href="{{url('/')}}/produto">Cadastro</a>
                         <a class="dropdown-item" href="{{url('/')}}/produto">Listar</a>
 
                     </div>
@@ -78,9 +78,9 @@
                         <i class="fas fa-fw fa-tachometer-alt"></i>
                         <span>Operações</span>
                     </a> <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-                        <a class="dropdown-item" href="cadastrooperacao.html">Cadastro operações</a>
-                        <a class="dropdown-item" href="cadastrarElemento.html">Cadastro elemento</a>
-                        <a class="dropdown-item" href="listaroperacao.html">Listar</a>
+                        <a class="dropdown-item" href="{{url('/')}}/operacao">Cadastro operações</a>
+                        <a class="dropdown-item" href="{{url('/')}}/operacao">Cadastro elemento</a>
+                        <a class="dropdown-item" href="{{url('/')}}/operacao">Listar</a>
 
                     </div>
                 </li>
@@ -96,9 +96,9 @@
             </ul>
 
             <div class="container-fluid"> 
-                
+
                 <!--Conteudo da Pagina-->
-                
+
                 @yield('conteudo')
 
 

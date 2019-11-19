@@ -13,7 +13,7 @@ class SequenciaController extends Controller
      */
     public function index()
     {
-        //
+       return view('sequencia.index');
     }
 
     /**
