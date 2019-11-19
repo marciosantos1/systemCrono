@@ -23,7 +23,7 @@ class SequenciaController extends Controller
      */
     public function create()
     {
-        //
+      return view('sequencia.create');
     }
 
     /**
@@ -56,7 +56,7 @@ class SequenciaController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('sequencia.edit');
     }
 
     /**

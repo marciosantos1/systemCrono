@@ -23,7 +23,7 @@ class TomadaTempoController extends Controller
      */
     public function create()
     {
-        //
+        return view('tomada-de-tempo.create');
     }
 
     /**
@@ -56,7 +56,7 @@ class TomadaTempoController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('tomada-de-tempo.edit');
     }
 
     /**

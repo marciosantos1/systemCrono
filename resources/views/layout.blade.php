@@ -54,8 +54,8 @@
                         <span>Usuário</span>
                     </a> <div class="dropdown-menu" aria-labelledby="pagesDropdown">
                         <a class="dropdown-item" href="{{url('/')}}/usuario">Fazer login</a> 
-                        <a class="dropdown-item" href="{{url('/')}}/usuario">Cadastrar usuário</a>
-                        <a class="dropdown-item" href="{{url('/')}}/usuario">Listar/Editar</a>
+                        <a class="dropdown-item" href="{{url('/')}}/usuario/create">Cadastrar usuário</a>
+                        <a class="dropdown-item" href="{{url('/')}}/usuario/1/edit">Listar/Editar</a>
 
 
                     </div>
@@ -79,7 +79,7 @@
                         <span>Operações</span>
                     </a> <div class="dropdown-menu" aria-labelledby="pagesDropdown">
                         <a class="dropdown-item" href="{{url('/')}}/operacao">Cadastro operações</a>
-                        <a class="dropdown-item" href="{{url('/')}}/operacao">Cadastro elemento</a>
+                        <a class="dropdown-item" href="{{url('/')}}/sequencia">Cadastro elemento</a>
                         <a class="dropdown-item" href="{{url('/')}}/operacao">Listar</a>
 
                     </div>
