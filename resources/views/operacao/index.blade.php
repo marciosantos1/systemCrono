@@ -1,19 +1,14 @@
+
+<!-- ...LISTAR OPERAÇÕES....-->
+
 @extends('layout')
 
 @section('conteudo')
 <div class="container-fluid">
-
-                    <!-- Breadcrumbs-->
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item">
-                            <a href="{{url('/')}}/operacao/create" class="btn-link">Nova operação</a>
-                        </li>
-
-                    </ol>
-
+                  
                     <!-- Tabela de listar -->
                     <div class="card mb-3">
-                        <div class="card-header">
+                        <div class="card-header" style="font-size: larger">
                             <i class="fas fa-table"></i>
                             Lista de Operações</div>
                         <div class="card-body">
@@ -59,6 +54,7 @@
                                         </tr>
 
                                     </tbody>
+                                   <th><a href="{{url('/')}}/operacao/create" class="btn btn-success">Nova operação</a></th>
                                 </table>
                             </div>
                         </div>

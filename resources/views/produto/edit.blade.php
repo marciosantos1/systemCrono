@@ -1,4 +1,6 @@
 
+<!-- ...EDITAR PRODUTOS....-->
+
 @extends('layout')
 
 @section('conteudo')

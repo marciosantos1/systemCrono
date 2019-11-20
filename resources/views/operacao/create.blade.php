@@ -1,3 +1,6 @@
+
+<!-- ...CADASTRO DE OPERAÇÕES....-->
+
 @extends('layout')
 
 @section('conteudo')
@@ -5,8 +8,7 @@
 
     <!-- Breadcrumbs-->
     <ol class="breadcrumb">
-        <li class="breadcrumb-item">
-            <a href="{{url('/')}}/operacao/create" class="btn-link">Nova operação</a>
+        <li class="breadcrumb-item">           
 
             <form>
                 <div class="text-center" >
@@ -42,7 +44,7 @@
                 <th><a href="" class="btn btn-success">Salvar</a></th>
                 <th><a href="" class="btn btn-warning">Cancelar</a></th>
                 <th><a href="{{url('/')}}/sequencia/create" class="btn btn-primary">Cadastrar elemento</a></th>
-
+                <th><a href="{{url('/')}}/operacao/create" class="btn btn-success">Nova operação</a></th>
 
 
             </form>

@@ -1,48 +1,29 @@
 @extends('layout')
 
 @section('conteudo')
-<div class="card mb-3">
-                        <div class="card-header">
-                            <i class="fas fa-table"></i>
-                            Lista de produtos</div>
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>Codigo</th>
-                                            <th>Nome</th>
-                                            <th>Opçao</th>
+<div id="content-wrapper">
 
-                                        </tr>
-                                    </thead>
-                                     <tbody>
-                                        <tr>
-                                            <th>10</th>
-                                            <th>Camisa polo</th>
-                                            <th><a href="editarProduto.html?cod=5" class="btn btn-primary">Editar</a>
-                                                <a href="" class="btn btn-danger">Excluir</a></th>
-                                        </tr>
+    &nbsp;&nbsp;
 
+    <center>
+                 
+            <div style="font-size: large">Listagem Tomada de tempo</div>
+            
+        </br></br>
+        <table width="60%" border="4">
+            <thead>                  
+            <td>Nº Cronômetro</td>
+            <td>Elemento</td>
+            <td>Tempo</td>
+            <td>Opções</td>
+            
+            </thead>
+          <tbody id="corpoTabela">
+              <th><a href="{{url('/')}}/tomada-tempo/1/edit" class="btn btn-primary"> + </a></th>                   
+        </tbody>
+        </table></br></br>
+        <th><a href="{{url('/')}}/tomada-tempo/create" class="btn btn-success">Iniciar nova tomada de tempo?</a></th>
+    </center>
 
-                                        <tr>
-                                            <th>12</th>
-                                            <th>Calça</th>
-                                            <th><a href="" class="btn btn-primary">Editar</a>
-                                                <a href="" class="btn btn-danger">Excluir</a></th>
-                                        </tr>
-                                        <tr>
-                                            <th>13</th>
-                                            <th>Camisa polo</th>
-                                            <th><a href="" class="btn btn-primary">Editar</a>
-                                                <a href="" class="btn btn-danger">Excluir</a></th>
-                                        </tr>
-
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-
-                    </div>
-
+</div>
 @stop

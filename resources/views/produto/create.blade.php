@@ -1,3 +1,6 @@
+
+<!-- ...CADASTRAR PRODUTOS....-->
+
 @extends('layout')
 
 @section('conteudo')

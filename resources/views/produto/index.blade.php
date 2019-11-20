@@ -1,3 +1,6 @@
+
+<!-- ...LISTAR PRODUTOS....-->
+
 @extends('layout')
 
 @section('conteudo')

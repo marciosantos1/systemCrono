@@ -81,6 +81,8 @@
                         <a class="dropdown-item" href="{{url('/')}}/operacao/create">Cadastro operações</a>
                         <a class="dropdown-item" href="{{url('/')}}/sequencia/create">Cadastro elemento</a>
                         <a class="dropdown-item" href="{{url('/')}}/operacao">Listar</a>
+                        <a class="dropdown-item" href="{{url('/')}}/sequencia/create">Cadastro de sequência</a>
+                        <a class="dropdown-item" href="{{url('/')}}/tomada-tempo">Tomada de tempo</a>
 
                     </div>
                 </li>
