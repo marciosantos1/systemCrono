@@ -29,7 +29,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `sistemaCrono`.`operacao` (
   `codOperacao` INT NOT NULL AUTO_INCREMENT,
-  `nomeOP` VARCHAR(60) NULL,
+  `nomeOeracao` VARCHAR(60) NULL,
   `codProduto` INT NOT NULL,
   `maquina` VARCHAR(45) NULL,
   `tipoEstudo` VARCHAR(45) NULL,
