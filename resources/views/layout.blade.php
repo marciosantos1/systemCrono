@@ -78,7 +78,7 @@
                         <i class="fas fa-fw fa-tachometer-alt"></i>
                         <span>Operações</span>
                     </a> <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-                        <a class="dropdown-item" href="{{url('/')}}/operacao">Cadastro operações</a>
+                        <a class="dropdown-item" href="{{url('/')}}/operacao/create">Cadastro operações</a>
                         <a class="dropdown-item" href="{{url('/')}}/sequencia">Cadastro elemento</a>
                         <a class="dropdown-item" href="{{url('/')}}/operacao">Listar</a>
 

@@ -13,7 +13,8 @@ class ProdutoController extends Controller
      */
     public function index()
     {
-        return view('produto.index');
+        $produto = \App\Produto::get();
+        return view('produto.index', compact('produto'));
     }
 
     /**
@@ -23,18 +24,19 @@ class ProdutoController extends Controller
      */
     public function create()
     {
+        
        return view('produto.create');
+       
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+   
+    
     public function store(Request $request)
     {
-        //
+       $produto = new \App\Produto();
+       $produto->nomeProduto =$request->get('nomeProduto');
+       $produto->save();
+       return "true";
     }
 
     /**
@@ -56,19 +58,19 @@ class ProdutoController extends Controller
      */
     public function edit($id)
     {
-        return view('produto.edit');
+        $produto = \App\Produto::find($id);
+        
+        return view('produto.edit', compact('produto'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    
+   
     public function update(Request $request, $id)
     {
-        //
+         $produto = \App\Produto::find($id);
+         $produto->nomeProduto = $request->get('nomeProduto');
+         $produto->save();
+         return "true";
     }
 
     /**
@@ -79,6 +81,8 @@ class ProdutoController extends Controller
      */
     public function destroy($id)
     {
-        //
+         $produto = \App\Produto::find($id);
+         $produto->delete();
+         return "true";
     }
 }
