@@ -1,6 +1,34 @@
 @extends('layout')
 
 @section('conteudo')
+
+<script>
+                      function delOperacao(id, url){
+                          
+                          confirma = confirm("Deseja realmente eliminar a operação ?");
+                          if (confirma){
+                          
+                          dados = $('#'+id).serialize();
+                          
+                          $.ajax({
+                              method: 'post',
+                              url: url,
+                              data:dados,
+                              dataType:'html',
+                              sucess: function (data){
+                                  //Mensagem de sucesso
+                                  $('#linha'+id).remove();
+                              },
+                              error: function (argument) {
+                                  //Mnesagem de erro
+                                  alert('falha ao eliminar produto !');
+                              }
+                          });
+                      }
+                          return false;
+                      }
+                      </script>
+
 <div class="container-fluid">
 
     <!-- Breadcrumbs-->
@@ -32,7 +60,8 @@
                     </thead>
                     <tbody>
 
-                        @foreach($operacoes as $p)
+                        @foreach($operacao as $p)
+                        <tr id="linhadel{{$p->codoperacao}}"
                         <tr>
                             <th>10</th>
                             <th>Fechar Ombro</th>
@@ -47,6 +76,8 @@
                     <th><a href="telaCronometragem.html" class="btn btn-info">Iniciar</a></th>
                     </tr>
                       @endforeach
+                      
+                      
 
                     <tr>
                         <th>12</th>

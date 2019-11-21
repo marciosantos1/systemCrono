@@ -80,7 +80,7 @@
                     </a> <div class="dropdown-menu" aria-labelledby="pagesDropdown">
                         <a class="dropdown-item" href="{{url('/')}}/operacao/create">Cadastro operações</a>
                         <a class="dropdown-item" href="{{url('/')}}/sequencia">Cadastro elemento</a>
-                        <a class="dropdown-item" href="{{url('/')}}/operacao/1/edit">Listar/Editar</a>
+                        <a class="dropdown-item" href="{{url('/')}}/operacao">Listar/Editar</a>
 
                     </div>
                 </li>

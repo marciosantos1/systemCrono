@@ -81,6 +81,10 @@ class OperacaoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        
+         $operacao = \App\Operacao::find($id);
+         $operacao->delete();
+         return "true";
+    
     }
 }
