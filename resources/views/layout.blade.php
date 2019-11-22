@@ -95,7 +95,7 @@
 
             </ul>
 
-            <div class="container-fluid"> 
+            <div class="container-fluid" > 
 
                 <!--Conteudo da Pagina-->
 

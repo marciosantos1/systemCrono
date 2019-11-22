@@ -16,7 +16,7 @@
             },
             error: function (argument){
             //mensagem erro
-            alert('erro');
+            alert('Erro');
             }
 
     });
@@ -35,7 +35,7 @@
             @csrf
             <div class="form-group">
                 <label for="exampleInputPassword1">Nome</label>
-                <input id="nomeProduto" class="form-control">
+                <input id="nomeProduto" name="nomeProduto" class="form-control">
             </div></br>
 
 
