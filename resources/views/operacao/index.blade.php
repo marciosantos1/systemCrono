@@ -19,7 +19,7 @@
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
+                                   <tbody>
                                         <tr>
                                             <th>Código</th>
                                             <th>Nome da Operação</th>
@@ -29,8 +29,6 @@
 
 
                                         </tr>
-                                    </thead>
-                                    <tbody>
                                         <tr>
                                             <th>10</th>
                                             <th>Fechar Ombro</th>

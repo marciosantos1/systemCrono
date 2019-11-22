@@ -1,6 +1,30 @@
 @extends('layout')
 
 @section('conteudo')
+
+<script>
+    function delProduto(id, url){
+        
+        dados = $('#'+id).serialize();
+        $.ajax({
+            method: 'post',
+            url: url,
+            data: dados,
+            dataType: 'html',
+            success: function (data){
+                //mensagem socesso
+                alert('Poduto eliminado');
+            },
+            error: function (argument){
+                //mensagem erro
+                alert('Falha ao eliminar produto');
+            }
+            
+        });
+        return false;
+    }
+</script>
+
 <div class="card mb-3">
     <div class="card-header">
         <i class="fas fa-table"></i>
@@ -22,7 +46,7 @@
                         <th>{{$p->nomeProduto}}</th>
                         <th><a href="{{route('produto.edit', $p->codProduto)}}" class="btn btn-primary">Editar</a>
                             <a href="" onclick="return delProduto('del{{$p->codProduto}}', '{{route('produto.destroy', $p->codProduto)}}')" class="btn btn-danger">Excluir</a>
-                            <form action="" method="post" id="del {{$p->codProduto}}">
+                            <form action="" method="post" id="del{{$p->codProduto}}">
                                 @csrf
                                 @method('DELETE')
                             </form>

@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 class Cronometragem extends Model
 {
     protected $table = 'cronometragem';
-    protected $primarykey = 'codTomadaDeTempo';
+    protected $primaryKey = 'codTomadaDeTempo';
 }
