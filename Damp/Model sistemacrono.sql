@@ -10,6 +10,9 @@ CREATE TABLE IF NOT EXISTS `sistemaCrono`.`usuario` (
   `codUsuario` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(120) NULL,
   `senha` VARCHAR(45) NULL,
+  `created_at` DATETIME NULL,
+  `updated_at` DATETIME NULL,
+
   PRIMARY KEY (`codUsuario`))
 ENGINE = InnoDB;
 
@@ -20,6 +23,8 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `sistemaCrono`.`produto` (
   `codProduto` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `nomeProduto` VARCHAR(60) NULL,
+`created_at` DATETIME NULL,
+  `updated_at` DATETIME NULL,
   PRIMARY KEY (`codProduto`))
 ENGINE = InnoDB;
 
@@ -34,6 +39,9 @@ CREATE TABLE IF NOT EXISTS `sistemaCrono`.`operacao` (
   `maquina` VARCHAR(45) NULL,
   `tipoEstudo` VARCHAR(45) NULL,
   `cronometrista` VARCHAR(45) NULL,
+`created_at` DATETIME NULL,
+  `updated_at` DATETIME NULL,
+
   PRIMARY KEY (`codOperacao`))
 ENGINE = InnoDB;
 
@@ -50,6 +58,9 @@ CREATE TABLE IF NOT EXISTS `sistemaCrono`.`elementos` (
   `concessoes` DOUBLE NULL,
   `qtdVezes` INT NULL,
   `porPeca` INT NULL,
+`created_at` DATETIME NULL,
+  `updated_at` DATETIME NULL,
+
   PRIMARY KEY (`codElemento`))
 ENGINE = InnoDB;
 
@@ -66,6 +77,9 @@ CREATE TABLE IF NOT EXISTS `sistemaCrono`.`tomadaDeTempo` (
   `turno` VARCHAR(45) NULL,
   `obs` VARCHAR(60) NULL,
   `tomadaDeTempocol` VARCHAR(45) NULL,
+`created_at` DATETIME NULL,
+  `updated_at` DATETIME NULL,
+
   PRIMARY KEY (`codTomadaDeTempo`))
 ENGINE = InnoDB;
 
@@ -78,6 +92,9 @@ CREATE TABLE IF NOT EXISTS `sistemaCrono`.`cronometragem` (
   `tempo` FLOAT NULL,
   `numCronometragem` INT NOT NULL,
   `codElemento` INT NOT NULL,
+`created_at` DATETIME NULL,
+  `updated_at` DATETIME NULL,
+
   PRIMARY KEY (`codTomadaDeTempo`))
 ENGINE = InnoDB;
 

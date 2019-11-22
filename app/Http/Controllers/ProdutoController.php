@@ -34,7 +34,7 @@ class ProdutoController extends Controller
     public function store(Request $request)
     {
        $produto = new \App\Produto();
-       $produto->nomeProduto =$request->get('nomeProduto');
+       $produto->nomeProduto = $request->get('nomeProduto');
        $produto->save();
        return "true";
     }
@@ -60,7 +60,7 @@ class ProdutoController extends Controller
     {
         $produto = \App\Produto::find($id);
         
-        return view('produto.edit', compact('produto'));
+        return view('produto.edit',compact('produto'));
     }
 
     

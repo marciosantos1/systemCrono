@@ -4,7 +4,9 @@
 
 <script>
     function delProduto(id, url){
+        confirma = confirm("deseja realmente eliminar o produto");
         
+        if(confirma){
         dados = $('#'+id).serialize();
         $.ajax({
             method: 'post',
@@ -12,8 +14,8 @@
             data: dados,
             dataType: 'html',
             success: function (data){
-                //mensagem socesso
-                alert('Poduto eliminado');
+               
+                $('#linha'+id).remove();
             },
             error: function (argument){
                 //mensagem erro
@@ -21,6 +23,7 @@
             }
             
         });
+    }
         return false;
     }
 </script>
@@ -41,7 +44,7 @@
                     </tr>
 
                     @foreach ($produto as $p)
-                    <tr>
+                    <tr id="linhadel{{$p->codProduto}}">
                         <th>{{$p->codProduto}} </th>
                         <th>{{$p->nomeProduto}}</th>
                         <th><a href="{{route('produto.edit', $p->codProduto)}}" class="btn btn-primary">Editar</a>
