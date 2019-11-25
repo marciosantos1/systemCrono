@@ -6,7 +6,7 @@
 @section('conteudo')
 <script>
     function delProduto(id, url){
-        confirma = confirm("Deseja realmente eliminar o produto");
+        confirma = confirm("Deseja realmente eliminar o produto?");
         
         if(confirma){
         dados = $('#'+id).serialize();
