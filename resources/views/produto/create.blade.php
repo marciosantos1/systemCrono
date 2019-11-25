@@ -4,28 +4,49 @@
 @extends('layout')
 
 @section('conteudo')
+<script>
+    function createProduto(url){
+    dados = $('#create').serialize();
+    $.ajax({
+    method: 'post',
+    url: url,
+    data: dados,
+    dataType: 'html',
+    success: function (data){
+    //mensagem sucesso
+    alert('Produto cadastrado com sucesso')
+    },
+    error: function (argument){
+    //mensagem erro
+    alert('Erro');
+    }
+    });
+    return href="{{route('produto.index')}}";
+    }
+</script>
+
 <div id="content-wrapper">
 
     <div class="text-center">
         <h1>Cadastrar novo produto</h1>
     </div>
     <div class="container my-auto">
-        <form>
-            <div class="form-group">
-                <label for="exampleInputEmail1">Código</label>
-                <input  class="form-control">
 
-            </div>
+        <form id="create" method="post" action=""> 
+            @csrf
             <div class="form-group">
-                <label for="exampleInputPassword1">Nome</label>
-                <input class="form-control">
+                <label for="nomeProduto">Nome</label>
+                <input id="nomeProduto" name="nomeProduto" class="form-control">
             </div></br>
-            <div class="container my-auto">
-                <a class="btn btn-primary"  href=" ">Cadastrar</a>
-                <a class="btn btn-warning"  href=" ">Cancelar</a>
 
-            </div>
-        </form>
+
+        </form> 
+
+        <div class="container my-auto">
+            <a class="btn btn-warning"  href="{{route('produto.create')}}">Cancelar</a>
+            <a onclick="return createProduto('{{route('produto.store')}}')" class="btn btn-danger" href="{{route('produto.index')}}">Cadastrar</a>
+
+        </div>
     </div>                     
 
 
