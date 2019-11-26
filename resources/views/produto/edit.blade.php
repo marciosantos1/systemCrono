@@ -9,13 +9,14 @@
 
     dados = $('#update').serialize();
     $.ajax({
-    method: 'post',
+    method: 'put',
             url: url,
             data: dados,
             dataType: 'html',
             success: function (data){
             //mensagem socesso
             alert('Produto alterado com socesso');
+            location.href = '{{route('produto.index')}}';
             },
             error: function (argument){
             //mensagem erro
@@ -34,7 +35,7 @@
         <h1>Editar produto: {{$produto->nomeProduto}}</h1>
     </div>
     <div class="container my-auto">
-        <form id="update" method="post" action="{{route('produto.update', $produto->codProduto)}}"> 
+        <form id="update" method="post" action=""> 
             @csrf
             <div class="form-group">
                 <label for="exampleInputEmail1">Código: {{$produto->codProduto}}</label>

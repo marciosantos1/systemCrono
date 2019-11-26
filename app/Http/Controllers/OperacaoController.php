@@ -13,7 +13,9 @@ class OperacaoController extends Controller
      */
     public function index()
     {
-     return view('operacao.index');
+         $operacao = \App\Operacao:: get();
+        return view('operacao.index', compact('operacao'));
+     
     }
 
     /**
@@ -23,7 +25,8 @@ class OperacaoController extends Controller
      */
     public function create()
     {
-       return view('operacao.create');
+      $produto = \App\Produto::get();
+        return view('operacao.create', compact('produto'));
     }
 
     /**
@@ -34,7 +37,14 @@ class OperacaoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $operacao = new \App\Operacao();
+        $operacao->nomeOperacao = $request->get('nomeOperacao');
+        $operacao->codProduto = $request->get('codproduto');
+        $operacao->maquina = $request->get('maquina');
+        $operacao->tipoEstudo = $request->get('tipoEstudo');
+        $operacao->cronometrista = $request->get('cronometrista');
+       $operacao->save();
+       return "true";
     }
 
     /**
