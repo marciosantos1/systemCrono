@@ -47,7 +47,7 @@
                 <input id="nomeProduto" name="nomeProduto" value="{{$produto->nomeProduto}}" class="form-control">
             </div>
         </form>
-        <a  onclick="return update('{{route('produto.update', $produto->codProduto)}}')" class="btn btn-danger"href="{{route('produto.index')}}">Salvar Alteraçoes</a>
-        <a class="btn btn-warning"  href="{{route('produto.index')}}">Cancelar</a>
+        <a  onclick="return update('{{route('produto.update', $produto->codProduto)}}')" class="btn btn-danger" href="{{route('produto.index')}}">Salvar Alterações</a>
+        <a class="btn btn-warning" href="{{route('produto.index')}}">Cancelar</a>
     </div>
     @stop

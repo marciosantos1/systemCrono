@@ -20,7 +20,7 @@
             },
             error: function (argument){
                 //mensagem erro
-                alert('Falha ao eliminar produto');
+                alert('Falha ao eliminar usuário !');
             }
             
         });
@@ -66,7 +66,7 @@
                         <th>{{$u->senha}}</th>
                         <th><a href="{{route('usuario.edit', $u->codUsuario)}}" class="btn btn-primary">Editar</a>
                             <a  onclick="return delUsuario('delUsuario{{$u->codUsuario}}', '{{route('usuario.destroy', $u->codUsuario)}}')" class="btn btn-danger"href="{{route('usuario.index')}}">Excluir</a>
-                            <form action="" method="post" id="delUsuario{{$p->codUsuario}}">
+                            <form action="" method="post" id="delUsuario{{$u->codUsuario}}">
                                 @csrf
                                 @method('DELETE')
                             </form>

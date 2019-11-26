@@ -10,14 +10,14 @@
                         <form>
                             <div class="form-group">
                                 <div class="form-label-group">
-                                    <input type="text" id="email" class="form-control" placeholder="Email " required="required" autofocus="autofocus">
-                                    <label for="email">Nome</label>
+                                    <input type="text" id="nome" name="nome" class="form-control" placeholder="nome " required="required" autofocus="autofocus">
+                                    <label for="nome">Nome</label>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="form-label-group">
-                                    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="required">
-                                    <label for="inputPassword">Senha</label>
+                                    <input type="password" id="senha" name="senha" class="form-control" placeholder="Password" required="required">
+                                    <label for="senha">Senha</label>
                                 </div>
                             </div>
                             
