@@ -69,10 +69,7 @@
 
                 <a class="btn btn-warning"  href="">Cancelar</a>
                 <a href="" onclick="return createOperacao('{{route('operacao.store')}}')" class="btn btn-danger">Cadastrar</a>
-
-                <th><a href="" class="btn btn-success">Salvar</a></th>
-                <th><a href="" class="btn btn-warning">Cancelar</a></th>
-                <th><a href="cadastrarElemento.html" class="btn btn-primary">Cadastrar elemento</a></th>
+                <th><a href="" class="btn btn-primary">Cadastrar elemento</a></th>
 
 
 

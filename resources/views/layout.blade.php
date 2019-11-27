@@ -53,9 +53,9 @@
                         <i class="fas fa-fw fa-user-circle"></i>
                         <span>Usuário</span>
                     </a> <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-                        <a class="dropdown-item" href="{{url('/')}}/usuario">Fazer login</a> 
+                        <a class="dropdown-item" href="{{url('/')}}/login">Fazer login</a> 
                         <a class="dropdown-item" href="{{url('/')}}/usuario/create">Cadastrar usuário</a>
-                        <a class="dropdown-item" href="{{url('/')}}/usuario/1/edit">Listar/Editar</a>
+                        <a class="dropdown-item" href="{{url('/')}}/usuario">Listar/Editar</a>
 
 
                     </div>
@@ -79,8 +79,10 @@
                         <span>Operações</span>
                     </a> <div class="dropdown-menu" aria-labelledby="pagesDropdown">
                         <a class="dropdown-item" href="{{url('/')}}/operacao/create">Cadastro operações</a>
-                        <a class="dropdown-item" href="{{url('/')}}/sequencia">Cadastro elemento</a>
+                        <a class="dropdown-item" href="{{url('/')}}/sequencia/create">Cadastro elemento</a>
                         <a class="dropdown-item" href="{{url('/')}}/operacao">Listar</a>
+                        <a class="dropdown-item" href="{{url('/')}}/sequencia/create">Cadastro de sequência</a>
+                        <a class="dropdown-item" href="{{url('/')}}/tomada-tempo">Tomada de tempo</a>
 
                     </div>
                 </li>
@@ -95,7 +97,7 @@
 
             </ul>
 
-            <div class="container-fluid" > 
+            <div class="container-fluid"> 
 
                 <!--Conteudo da Pagina-->
 
