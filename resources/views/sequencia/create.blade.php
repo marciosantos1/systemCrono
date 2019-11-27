@@ -14,10 +14,29 @@
                 <td><input class="form-control-sm"></td>\n\
                 <td><input class="form-control-sm"></td>\n\
                 <td><input class="form-control-sm"></td>\n\
-                <td><a href="" onclick="return criarnovaLinha()" class="btn btn-primary"> + </a></td>\n\
                 </tr>';
 
         $('#corpoTabela').append(linha);
+        return false;
+    }
+    function createElemento(url) {
+
+        dados = $('#create').serialize();
+        $.ajax({
+            method: 'post',
+            url: url,
+            data: dados,
+            dataType: 'html',
+            success: function (data) {
+                //mensagem socesso
+                alert('Elementos cadastrados com socesso');
+            },
+            error: function (argument) {
+                //mensagem erro
+                alert('Erro');
+            }
+
+        });
         return false;
     }
 
@@ -40,7 +59,6 @@
                             <th>Concessões</th>
                             <th>Qtd.vezes</th>
                             <th>Por peça</th>
-                            <th>Novo elemento? </th>
 
                         </tr>
                     </thead>
@@ -53,8 +71,7 @@
                             <td><input name="interferencia []" class="form-control-sm"></td>
                             <td><input name="concessoes []" class="form-control-sm"></td>
                             <td><input name="qdtVezes []" class="form-control-sm"></td>
-                            <td><input name="porPeca []" class="form-control-sm"></td>                                               
-                            <td><a href="" onclick="return criarnovaLinha()" class="btn btn-primary"> + </a></td>
+                            <td><input name="porPeca []" class="form-control-sm"></td>  
                         </tr>
 
 
@@ -63,5 +80,8 @@
             </div>
         </div> 
     </form>
+    <a href="" onclick="return criarnovaLinha()" class="btn btn-primary"> + </a>
+    <a href="" onclick="return createElemento('{{route('sequencia.store')}}')" class="btn btn-danger">Cadastrar</a>
+
 </div>
 @stop
