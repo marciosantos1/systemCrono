@@ -25,7 +25,8 @@ class OperacaoController extends Controller
      */
     public function create()
     {
-       return view('operacao.create');
+        $produto = \App\Produto::get();
+        return view('operacao.create', compact('produto'));
     }
 
     /**
@@ -36,15 +37,19 @@ class OperacaoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       $operacao = new \App\Operacao();
+       $operacao->nomeOperacao = $request->get('nomeOperacao');
+       $operacao->save();
+       return "true"; 
     }
-
-    /**
+    
+     /**
      * Display the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    
     public function show($id)
     {
         //
@@ -58,7 +63,9 @@ class OperacaoController extends Controller
      */
     public function edit($id)
     {
-       return view('operacao.index');
+      $operacao = \App\Operacao::find($id);
+        
+        return view('operacao.edit',compact('operacao'));
     }
 
     /**
@@ -70,7 +77,10 @@ class OperacaoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+         $operacao = \App\Operacao::find($id);
+         $operacao->nomeOperacao = $request->get('nomeOperacao');
+         $operacao->save();
+         return "true";
     }
 
     /**
