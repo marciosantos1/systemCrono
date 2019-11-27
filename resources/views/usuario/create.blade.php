@@ -2,7 +2,8 @@
 
 @section('conteudo')
 <script>
-    function createUsuario(url){
+    
+   function createUsuario(url){
     dados = $('#create').serialize();
     $.ajax({
     method: 'post',
@@ -12,6 +13,7 @@
     success: function (data){
     //mensagem sucesso
     alert('Usuário cadastrado com sucesso')
+    
     },
     error: function (argument){
     //mensagem erro
@@ -20,6 +22,7 @@
     });
     return href="{{route('usuario.index')}}";
     }
+    
 </script>
 
 <div class="text-center" > 
@@ -54,7 +57,7 @@
                             </div>
                         </div>
                     </div>
-                    <a onclick="return createUsuario('{{route('usuario.store')}}')" class="btn btn-primary" href="{{route('usuario.index')}}">Salvar</a>
+                     <a onclick="return createUsuario('{{route('usuario.store')}}')"  class="btn btn-primary" href="{{route('usuario.index')}}">Salvar</a>
                 </form>                      
             </div>
         </div>

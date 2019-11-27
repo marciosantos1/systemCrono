@@ -1,6 +1,9 @@
 @extends('layout')
 
 @section('conteudo')
+<script>  
+    
+              </script>
     <div class="text-center" > 
             
             <div class="container">

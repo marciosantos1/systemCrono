@@ -22,7 +22,7 @@
                 //mensagem erro
                 alert('Falha ao eliminar usuário !');
             }
-            
+           
         });
     }
         return href="{{route('usuario.index')}}";

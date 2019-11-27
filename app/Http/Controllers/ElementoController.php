@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class SequenciaController extends Controller
+class ElementoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +13,7 @@ class SequenciaController extends Controller
      */
     public function index()
     {
-       return view('sequencia.index');
+       return view('elemento.index');
     }
 
     /**
@@ -23,7 +23,7 @@ class SequenciaController extends Controller
      */
     public function create()
     {
-      return view('sequencia.create');
+      return view('elemento.create');
     }
 
     /**
@@ -56,7 +56,7 @@ class SequenciaController extends Controller
      */
     public function edit($id)
     {
-        return view('sequencia.edit');
+        return view('elemento.edit');
     }
 
     /**

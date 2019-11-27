@@ -4,7 +4,7 @@
 <div class="card mb-3">
                         <div class="card-header">
                             <i class="fas fa-table"></i>
-                            Lista de produtos</div>
+                            Lista de elementos</div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -19,7 +19,7 @@
                                      <tbody>
                                         <tr>
                                             <th>10</th>
-                                            <th>Camisa polo</th>
+                                            <th>....</th>
                                             <th><a href="editarProduto.html?cod=5" class="btn btn-primary">Editar</a>
                                                 <a href="" class="btn btn-danger">Excluir</a></th>
                                         </tr>
@@ -27,13 +27,13 @@
 
                                         <tr>
                                             <th>12</th>
-                                            <th>Calça</th>
+                                            <th>....</th>
                                             <th><a href="" class="btn btn-primary">Editar</a>
                                                 <a href="" class="btn btn-danger">Excluir</a></th>
                                         </tr>
                                         <tr>
                                             <th>13</th>
-                                            <th>Camisa polo</th>
+                                            <th>....</th>
                                             <th><a href="" class="btn btn-primary">Editar</a>
                                                 <a href="" class="btn btn-danger">Excluir</a></th>
                                         </tr>

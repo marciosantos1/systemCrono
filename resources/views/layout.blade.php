@@ -79,9 +79,9 @@
                         <span>Operações</span>
                     </a> <div class="dropdown-menu" aria-labelledby="pagesDropdown">
                         <a class="dropdown-item" href="{{url('/')}}/operacao/create">Cadastro operações</a>
-                        <a class="dropdown-item" href="{{url('/')}}/sequencia/create">Cadastro elemento</a>
+                        <a class="dropdown-item" href="{{url('/')}}/elemento/create">Cadastro elemento</a>
                         <a class="dropdown-item" href="{{url('/')}}/operacao">Listar</a>
-                        <a class="dropdown-item" href="{{url('/')}}/sequencia/create">Cadastro de sequência</a>
+                        <a class="dropdown-item" href="{{url('/')}}/elemento/create">Cadastro de sequência</a>
                         <a class="dropdown-item" href="{{url('/')}}/tomada-tempo">Tomada de tempo</a>
 
                     </div>

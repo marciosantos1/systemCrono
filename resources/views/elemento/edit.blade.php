@@ -1,5 +1,4 @@
-
-<!-- ...CADASTRAR SEQUÊNCIA....-->
+<!-- ...EDITAR ELEMENTO....-->
 
 @extends('layout')
 
@@ -8,7 +7,7 @@
                             
                     <div class="card-body">
                                 <div class="table-responsive">
-                                    <div class="text-center" style="font-size: x-large">Cadastro de elementos</div>
+                                    <div class="text-center" style="font-size: x-large">Editar elemento</div>
                                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                         <tbody>
                                             <tr>
