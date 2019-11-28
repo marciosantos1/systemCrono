@@ -48,7 +48,7 @@
         @csrf
         <div class="card-body">
             <div class="table-responsive">
-                <div class="text-center" >Cadastro de elementos</div>
+                <div class="text-center" >Cadastro de elementos{{$p}}</div>
                 <table>
 
                     <thead>

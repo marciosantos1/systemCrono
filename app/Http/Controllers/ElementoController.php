@@ -21,7 +21,14 @@ class ElementoController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function create() {
-        return view('elemento.create');
+         $operacao = \App\Operacao::get();
+         
+         foreach ($operacao as $index => $codOperacao) {
+             $p = 'codOperacao';
+             
+         };
+         
+        return view('elemento.create', compact('p'));
     }
 
     /**

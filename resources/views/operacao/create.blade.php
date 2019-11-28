@@ -14,6 +14,7 @@
             success: function (data){
             //mensagem socesso
             alert('Operação cadastrado com socesso');
+            location.href = '{{route('elemento.create')}}';
             },
             error: function (argument){
             //mensagem erro
@@ -69,7 +70,7 @@
 
                 <a class="btn btn-warning"  href="">Cancelar</a>
                 <a href="" onclick="return createOperacao('{{route('operacao.store')}}')" class="btn btn-danger">Cadastrar</a>
-                <a href="{{route('elemento.create')}}" class="btn btn-primary">Cadastrar elemento</a>
+                <a href="" onclick="return createOperacao('{{route('operacao.store')}}')" class="btn btn-primary">Cadastrar elemento</a>
 
 
 
