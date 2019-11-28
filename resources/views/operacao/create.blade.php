@@ -12,7 +12,7 @@
             dataType: 'html',
             success: function (data){
             //mensagem socesso
-            alert('Operação cadastrado com socesso');
+            alert('Operação cadastrado com sucesso');
          
             },
             error: function (argument){
@@ -41,9 +41,9 @@
                 </div>
                 
                 <div class="form-group">
-                    <label for="exampleFormControlSelect1">Código da operação</label>
+                    <label for="exampleFormControlSelect1">Código do produto</label>
 
-                    <select id="codproduto" name="codproduto" class="form-control, col-md-12" id="exampleFormControlSelect1">
+                    <select id="codproduto" name="codProduto" class="form-control, col-md-12" id="exampleFormControlSelect1">
                         @foreach ($produto as $p)
                         <option value="{{$p->codProduto}}">{{$p->codProduto}} | {{$p->nomeProduto}}</option>
                        
@@ -72,6 +72,7 @@
                 <th><a href="cadastrarElemento.html" class="btn btn-primary">Cadastrar elemento</a></th>
 
 
+                
 
             </form>
 

@@ -37,10 +37,14 @@ class OperacaoController extends Controller
      */
     public function store(Request $request)
     {
-       $operacao = new \App\Operacao();
-       $operacao->nomeOperacao = $request->get('nomeOperacao');
-       $operacao->save();
-       return "true"; 
+        $operacao = new \App\Operacao();
+        $operacao->nomeOperacao = $request->get('nomeOperacao');
+        $operacao->codProduto = $request->get('codProduto');
+        $operacao->maquina = $request->get('maquina');
+        $operacao->tipoEstudo = $request->get('tipoEstudo');
+        $operacao->cronometrista = $request->get('cronometrista');
+        $operacao->save();
+       return "true";
     }
     
      /**
@@ -64,8 +68,9 @@ class OperacaoController extends Controller
     public function edit($id)
     {
       $operacao = \App\Operacao::find($id);
-        
-        return view('operacao.edit',compact('operacao'));
+      $produto = \App\Produto::get();
+      
+      return view('operacao.edit',compact('operacao', 'produto'));
     }
 
     /**
@@ -77,8 +82,12 @@ class OperacaoController extends Controller
      */
     public function update(Request $request, $id)
     {
-         $operacao = \App\Operacao::find($id);
+        $operacao = \App\Operacao::find($id);
          $operacao->nomeOperacao = $request->get('nomeOperacao');
+         $operacao->codProduto = $request->get('codProduto');
+         $operacao->maquina = $request->get('maquina');
+         $operacao->tipoEstudo = $request->get('tipoEstudo');
+         $operacao->cronometrista = $request->get('cronometrista');
          $operacao->save();
          return "true";
     }

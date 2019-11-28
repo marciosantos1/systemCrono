@@ -50,9 +50,10 @@
                         <tr>
                             <th>Código</th>
                             <th>Nome da Operação</th>
-                            <th>Produto</th>
-                            <th>Opção</th>
-                            <th>Tomada de tempo</th>
+                            <th>Máquina</th>
+                            <th>Tipo estudo</th>
+                            <th>Cronometrista</th>
+                             <th>Opção</th>
 
 
                         </tr>
