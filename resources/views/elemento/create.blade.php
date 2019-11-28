@@ -8,12 +8,12 @@
     function criarnovaLinha() {
 
         linha = '<tr>\n\
-                <td><input class="form-control-sm"></td>\n\
-                <td><input class="form-control-sm"></td>\n\
-                <td><input class="form-control-sm"></td>\n\
-                <td><input class="form-control-sm"></td>\n\
-                <td><input class="form-control-sm"></td>\n\
-                <td><input class="form-control-sm"></td>\n\
+                <td><input name="nomeElemento[]" class="form-control-sm"></td>\n\
+                <td><input name="ritmo[]" class="form-control-sm"></td>\n\
+                <td><input name="interferencia[]" class="form-control-sm"></td>\n\
+                <td><input name="concessoes[]" class="form-control-sm"></td>\n\
+                <td><input name="qtdVezes[]" class="form-control-sm"></td>\n\
+                <td><input name="porPeca[]" class="form-control-sm"></td>\n\
                 </tr>';
 
         $('#corpoTabela').append(linha);
@@ -66,12 +66,12 @@
                     <tbody id="corpoTabela">
 
                         <tr>
-                            <td><input name="nomeElemento []" class="form-control-sm"></td>
-                            <td><input name="ritmo []" class="form-control-sm"></td>
-                            <td><input name="interferencia []" class="form-control-sm"></td>
-                            <td><input name="concessoes []" class="form-control-sm"></td>
-                            <td><input name="qdtVezes []" class="form-control-sm"></td>
-                            <td><input name="porPeca []" class="form-control-sm"></td>  
+                            <td><input name="nomeElemento[]" class="form-control-sm"></td>
+                            <td><input name="ritmo[]" class="form-control-sm"></td>
+                            <td><input name="interferencia[]" class="form-control-sm"></td>
+                            <td><input name="concessoes[]" class="form-control-sm"></td>
+                            <td><input name="qtdVezes[]" class="form-control-sm"></td>
+                            <td><input name="porPeca[]" class="form-control-sm"></td>  
                         </tr>
 
 

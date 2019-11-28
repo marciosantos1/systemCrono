@@ -31,26 +31,28 @@ class ElementoController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request) {
-        $qdtVezes[] = $request->get('qdtVezes');
-        $concessoes[] = $request->get('concessoes');
-        $interferencia[] = $request->get('interferencia');
-        $ritmo[] = $request->get('ritmo');
-        $porPeca[] = $request->get('porPeca');
+        $nomeElemento = $request->get('nomeElemento');
+        $qtdVezes = $request->get('qtdVezes');
+        $concessoes = $request->get('concessoes');
+        $interferencia = $request->get('interferencia');
+        $ritmo = $request->get('ritmo');
+        $porPeca = $request->get('porPeca');
 
-        foreach ($request->get('nomeElemento') as $index => $nome) {
+        foreach ($nomeElemento as $index => $nome) {
             $elemento = new \App\Elemento();
 
-             $elemento->codOperacao = '1';
-            
-            $elemento->nomeElemento = $nomeElemento[$index];
-            $elemento->ritmo =  $ritmo[$index];
-            $elemento->interferencia =  $interferencia[$index];
-            $elemento->concessoes =  $concessoes[$index];
-            $elemento->qdtVezes =  $qdtVezes[$index];
+            $elemento->codOperacao = 1;
+
+            $elemento->nomeElemento = $nome;
+            $elemento->ritmo = $ritmo[$index];
+            $elemento->interferencia = $interferencia[$index];
+            $elemento->concessoes = $concessoes[$index];
+            $elemento->qtdVezes = $qtdVezes[$index];
             $elemento->porPeca = $porPeca[$index];
             $elemento->save();
-            return "true";
+            
         };
+        return "true";
     }
 
     /**
