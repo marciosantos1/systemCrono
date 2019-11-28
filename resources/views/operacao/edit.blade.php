@@ -1,49 +1,87 @@
-
 @extends('layout')
 
 @section('conteudo')
+
+<script>
+    
+    function update(url){
+    dados = $('#update').serialize();
+    $.ajax({
+    method: 'put',
+            url: url,
+            data: dados,
+            dataType: 'html',
+            success: function (data){
+            //mensagem socesso
+            alert('Operação alterada com sucesso');
+            location.href = '{{route('operacao.index')}}';
+            },
+            error: function (argument){
+            //mensagem erro
+            alert('Erro');
+            }
+    });
+    return false;
+    }
+</script>
 
 <div class="container-fluid">
 
     <!-- Breadcrumbs-->
     <ol class="breadcrumb">
         <li class="breadcrumb-item">
-            <a href="cadastroOperacao.html" class="btn-link">Nova operação</a>
 
-            <form>
+             <div class="text-center">
+        
+       
+    </div>
+            
+            <form id="update" method="post" action=""> 
+                 @csrf
                 <div class="text-center" >
-                    <label for="exampleFormControlInput1">Painel de edição</label>
+                    
+                    <h1>Editar operacao: {{$operacao->nomeOperacao}}</h1>
+                    
+                    <label for="exampleFormControlInput1">Painel de edição </label>
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlInput1">Nome</label>
-                    <input type="text" class="form-control, col-md-12" id="exampleFormControlInput1" placeholder="Insira um novo nome para a operacao">
+                    <input type="text" class="form-control, col-md-12" id="nomeOperacao" name="nomeOperacao" value="{{$operacao->nomeOperacao}}">
                 </div>
+                
                 <div class="form-group">
-                    <label for="exampleFormControlSelect1">Código da operação</label>
-                    <select class="form-control, col-md-12" id="exampleFormControlSelect1">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
+                    <label for="exampleFormControlSelect1">Código do produto</label>
+
+                    <select id="codproduto" name="codProduto" class="form-control, col-md-12" id="exampleFormControlSelect1">
+                        
+                       @foreach ($produto as $p)
+                        <option value="{{$p->codProduto}}">{{$p->codProduto}} | {{$p->nomeProduto}}</option>
+                       
+                        @endforeach
+                       
+                        
                     </select>
+
                 </div>
+
                 <div class="form-group">
                     <label>Máquina</label>
-                    <input type="text" class="form-control, col-md-12" id="exampleFormControlInput1" placeholder="Insira nova máquina">
+                    <input type="text" class="form-control, col-md-12" id="maquina" name="maquina" value="{{$operacao->maquina}}">
                 </div>
                 <div class="form-group">
                     <label>Tipo estudo</label>
-                    <input type="text" class="form-control, col-md-12" id="exampleFormControlInput1" placeholder="Insira novo tipo Estudo">
+                    <input type="text" class="form-control, col-md-12" id="tipoEstudo" name="tipoEstudo" value="{{$operacao->tipoEstudo}}" >
                 </div>
                 <div class="form-group">
                     <label>Cronometrista</label>
-                    <input type="text" class="form-control, col-md-12" id="exampleFormControlInput1" placeholder="Insira novo Cronometrista">
+                    <input type="text" class="form-control, col-md-12" id="cronometrista" name="cronometrista" value="{{$operacao->tipoEstudo}}">
                 </div>
 
-                <th><a href="" class="btn btn-success">Salvar</a></th>
-                <th><a href="" class="btn btn-warning">Cancelar</a></th>
-                <th><a href="cadastrarElemento.html" class="btn btn-primary">Cadastrar elemento</a></th>
+              
+                <a href="" onclick="return update('{{route('operacao.update', $operacao->codOperacao)}}')" class="btn btn-success">Salvar alterações</a>
+                <a class="btn btn-warning"  href="">Cancelar</a>
+                
+                <a href="{{route('elemento.edit', $operacao->codOperacao)}}" class="btn btn-primary">Editar elementos</a>
 
 
 
@@ -54,4 +92,5 @@
     </ol>
 
 </div>
+
 @stop

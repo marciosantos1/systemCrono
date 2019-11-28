@@ -4,7 +4,6 @@
 
 <script>
     function createOperacao(url){
-
     dados = $('#create').serialize();
     $.ajax({
     method: 'post',
@@ -13,18 +12,17 @@
             dataType: 'html',
             success: function (data){
             //mensagem socesso
-            alert('Operação cadastrado com socesso');
+            alert('Operação cadastrado com sucesso');
             location.href = '{{route('elemento.create')}}';
+            
             },
             error: function (argument){
             //mensagem erro
             alert('Erro');
             }
-
     });
     return false;
     }
-
 </script>
 
 <div class="container-fluid">
@@ -46,7 +44,7 @@
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Código do produto</label>
 
-                    <select id="codproduto" name="codproduto" class="form-control, col-md-12" id="exampleFormControlSelect1">
+                    <select id="codproduto" name="codProduto" class="form-control, col-md-12" id="exampleFormControlSelect1">
                         @foreach ($produto as $p)
                         <option value="{{$p->codProduto}}">{{$p->codProduto}} | {{$p->nomeProduto}}</option>
 
@@ -68,9 +66,12 @@
                     <input type="text" class="form-control, col-md-12" id="cronometrista" name="cronometrista" placeholder="Insira o Cronometrista">
                 </div>
 
+
+                <a href="" onclick="return createOperacao('{{route('operacao.store')}}')" class="btn btn-success">Cadastrar</a>
                 <a class="btn btn-warning"  href="">Cancelar</a>
-                <a href="" onclick="return createOperacao('{{route('operacao.store')}}')" class="btn btn-danger">Cadastrar</a>
-                <a href="" onclick="return createOperacao('{{route('operacao.store')}}')" class="btn btn-primary">Cadastrar elemento</a>
+                <button href="" onclick="return createOperacao('{{route('operacao.store')}}')" class="btn btn-success">Cadastrar elemento</button>
+
+
 
 
 

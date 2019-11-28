@@ -21,13 +21,12 @@ class ElementoController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function create() {
-         $operacao = \App\Operacao::get();
-         
-         foreach ($operacao as $index => $codOperacao) {
-             $p = 'codOperacao';
-             
-         };
-         
+        $operacao = \App\Operacao::get();
+
+        foreach ($operacao as $index => $op) {
+            $p = $op;
+        };
+
         return view('elemento.create', compact('p'));
     }
 
@@ -44,11 +43,11 @@ class ElementoController extends Controller {
         $interferencia = $request->get('interferencia');
         $ritmo = $request->get('ritmo');
         $porPeca = $request->get('porPeca');
-
+        $codOperacao = $request->get('codOperacao');
         foreach ($nomeElemento as $index => $nome) {
             $elemento = new \App\Elemento();
 
-            $elemento->codOperacao = 1;
+            $elemento->codOperacao = $codOperacao;
 
             $elemento->nomeElemento = $nome;
             $elemento->ritmo = $ritmo[$index];
@@ -57,7 +56,6 @@ class ElementoController extends Controller {
             $elemento->qtdVezes = $qtdVezes[$index];
             $elemento->porPeca = $porPeca[$index];
             $elemento->save();
-            
         };
         return "true";
     }
@@ -79,7 +77,9 @@ class ElementoController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function edit($id) {
-        return view('elemento.edit');
+        $elementos = \App\Elemento::where('codOperacao', '=', $id)->get();
+        
+        return view('elemento.edit', compact('elementos'));
     }
 
     /**

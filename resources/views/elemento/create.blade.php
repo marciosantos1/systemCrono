@@ -30,6 +30,7 @@
             success: function (data) {
                 //mensagem socesso
                 alert('Elementos cadastrados com socesso');
+               
             },
             error: function (argument) {
                 //mensagem erro
@@ -45,10 +46,13 @@
 <div id="content-wrapper">
 
     <form id="create" method="post" action=""> 
+        <input type="hidden" id="codOperacao" name="codOperacao" value="{{$p->codOperacao}}"/>
         @csrf
         <div class="card-body">
             <div class="table-responsive">
-                <div class="text-center" >Cadastro de elementos{{$p}}</div>
+                <div class="text-center" >Cadastro de elementos</div>
+                <div class="text-center">Elemnto:{{$p->nomeOperacao}} Cod:{{$p->codOperacao}}</div>
+                <br>
                 <table>
 
                     <thead>
