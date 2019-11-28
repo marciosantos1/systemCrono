@@ -53,12 +53,12 @@
                        
                         <tr id="linhaDel{{$p->codElemento}}">
                            
-                            <td><input name="nomeElemento[]" class="form-control-sm" value="{{$p->nomeElemento}}"></td>
-                            <td><input name="ritmo[]" class="form-control-sm" value="{{$p->ritmo}}"></td>
-                            <td><input name="interferencia[]" class="form-control-sm" value="{{$p->interferencia}}"></td>
-                            <td><input name="concessoes[]" class="form-control-sm" value="{{$p->concessoes}}"></td>
-                            <td><input name="qtdVezes[]" class="form-control-sm" value="{{$p->qtdVezes}}"></td>
-                            <td><input name="porPeca[]" class="form-control-sm" value="{{$p->porPeca}}"></td>  
+                            <td><input name="nomeElemento[]" class="form-control-file" value="{{$p->nomeElemento}}"></td>
+                            <td><input name="ritmo[]" class="form-control-file" value="{{$p->ritmo}}"></td>
+                            <td><input name="interferencia[]" class="form-control-file" value="{{$p->interferencia}}"></td>
+                            <td><input name="concessoes[]" class="form-control-file" value="{{$p->concessoes}}"></td>
+                            <td><input name="qtdVezes[]" class="form-control-file" value="{{$p->qtdVezes}}"></td>
+                            <td><input name="porPeca[]" class="form-control-file" value="{{$p->porPeca}}"></td>  
                         </tr>
 
                         @endforeach

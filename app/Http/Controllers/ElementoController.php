@@ -12,7 +12,8 @@ class ElementoController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        return view('elemento.index');
+        $elementos = \App\Elemento::where('codOperacao', '=', $_GET['cod'])->get();
+        return view('elemento.index', compact('elementos'));
     }
 
     /**
