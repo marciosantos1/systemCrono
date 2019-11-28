@@ -49,7 +49,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `sa`.`elementos`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `sistemaCrono`.`elementos` (
+CREATE TABLE IF NOT EXISTS `sistemaCrono`.`elemento` (
   `codElemento` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `nomeElemento` VARCHAR(60) NULL,
   `codOperacao` INT NOT NULL,

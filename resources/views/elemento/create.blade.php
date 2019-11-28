@@ -81,7 +81,7 @@
         </div> 
     </form>
     <a href="" onclick="return criarnovaLinha()" class="btn btn-primary"> + </a>
-    <a href="" onclick="return createElemento('{{route('sequencia.store')}}')" class="btn btn-danger">Cadastrar</a>
+    <a href="" onclick="return createElemento('{{route('elemento.store')}}')" class="btn btn-danger">Cadastrar</a>
 
 </div>
 @stop

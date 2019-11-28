@@ -14,7 +14,6 @@
             success: function (data){
             //mensagem socesso
             alert('Operação cadastrado com socesso');
-         
             },
             error: function (argument){
             //mensagem erro
@@ -24,6 +23,7 @@
     });
     return false;
     }
+
 </script>
 
 <div class="container-fluid">
@@ -33,7 +33,7 @@
         <li class="breadcrumb-item">
 
             <form id="create" method="post" action=""> 
-                 @csrf
+                @csrf
                 <div class="text-center" >
                     <label for="exampleFormControlInput1">Cadastro de operações</label>
                 </div>
@@ -41,14 +41,14 @@
                     <label for="exampleFormControlInput1">Nome</label>
                     <input type="text" class="form-control, col-md-12" id="nomeOperacao" name="nomeOperacao" placeholder="Insira o nome da operacao">
                 </div>
-                
+
                 <div class="form-group">
-                    <label for="exampleFormControlSelect1">Código da operação</label>
+                    <label for="exampleFormControlSelect1">Código do produto</label>
 
                     <select id="codproduto" name="codproduto" class="form-control, col-md-12" id="exampleFormControlSelect1">
                         @foreach ($produto as $p)
                         <option value="{{$p->codProduto}}">{{$p->codProduto}} | {{$p->nomeProduto}}</option>
-                       
+
                         @endforeach
                     </select>
 
@@ -69,7 +69,7 @@
 
                 <a class="btn btn-warning"  href="">Cancelar</a>
                 <a href="" onclick="return createOperacao('{{route('operacao.store')}}')" class="btn btn-danger">Cadastrar</a>
-                <th><a href="" class="btn btn-primary">Cadastrar elemento</a></th>
+                <a href="{{route('elemento.create')}}" class="btn btn-primary">Cadastrar elemento</a>
 
 
 

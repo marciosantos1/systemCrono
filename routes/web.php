@@ -19,6 +19,6 @@ Route::get('/cronometragem','CronometragemController@index');
 Route::resource('operacao','OperacaoController');   
 Route::resource('produto','ProdutoController'); 
 Route::resource('usuario','UsuarioController'); 
-Route::resource('sequencia','SequenciaController');
+Route::resource('elemento','ElementoController');
 Route::resource('tomada-tempo','TomadaTempoController'); 
 
