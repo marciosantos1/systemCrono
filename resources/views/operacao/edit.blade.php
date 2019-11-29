@@ -36,7 +36,7 @@
        
     </div>
             
-            <form id="create" method="post" action=""> 
+            <form id="update" method="post" action=""> 
                  @csrf
                 <div class="text-center" >
                     

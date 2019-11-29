@@ -34,6 +34,7 @@
     <div class="container my-auto">
         <form id="update" method="post" action=""> 
             @csrf
+            @method('patch')
             <div class="form-group">
                 <label for="exampleInputEmail1">Código: {{$produto->codProduto}}</label>
                
