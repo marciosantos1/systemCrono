@@ -21,4 +21,4 @@ Route::resource('produto','ProdutoController');
 Route::resource('usuario','UsuarioController'); 
 Route::resource('elemento','ElementoController');
 Route::resource('tomada-tempo','TomadaTempoController'); 
-
+Route::resource('login','LoginController');
