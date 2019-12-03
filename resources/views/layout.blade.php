@@ -91,7 +91,9 @@
                     <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fas fa-clipboard"></i>
                         <span>Relatórios</span>
-                    </a>
+                        
+                    </a><div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                        <a class="dropdown-item" href="{{url('/')}}/cronometragem">Cronômetro</a>
                 </li>
 
 

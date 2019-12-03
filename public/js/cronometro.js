@@ -92,3 +92,45 @@ function capturarTempo(){
     
     
 }
+var tomadaTempo = null;
+function getTomadaTempo(codTomadaTempo){
+    
+    $.ajax({
+    method: 'get',
+    url: '/cronometragem/get-tomada-tempo',
+    data: 'cod='+codTomadaTempo,
+    dataType: 'json',
+    success: function (data){
+    //mensagem sucesso
+    tomadaTempo = data;
+    
+    },
+    error: function(argument){
+    //mensagem erro
+    alert('Falha ao obter dados');
+    }
+    });
+   
+    }
+    var elemento = null;
+    function getElemento(codOperacao){
+    
+    $.ajax({
+    method: 'get',
+    url: '/cronometragem/get-elemento',
+    data: 'cod='+codOperacao,
+    dataType: 'json',
+    success: function (data){
+    //mensagem sucesso
+    elemento = data;
+    
+    },
+    error: function(argument){
+    //mensagem erro
+    alert('Falha ao obter dados');
+    }
+    });
+   
+    }
+    
+

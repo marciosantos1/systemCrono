@@ -13,6 +13,10 @@
 
 Route::get('/','IndexController@index');
 Route::get('/cronometragem','CronometragemController@index');
+Route::get('/cronometragem/get-tomada-tempo','CronometragemController@getTomadaTempo');
+Route::get('/cronometragem/get-elemento','CronometragemController@getElemento');
+Route::post('/cronometragem/guardar','CronometragemController@guardar');
+
 
 
 
@@ -23,4 +27,5 @@ Route::resource('usuario','UsuarioController');
 Route::resource('sequencia','SequenciaController');
 Route::resource('tomada-tempo','TomadaTempoController'); 
 Route::resource('login','LoginController');
+Route::resource('elemento','ElementoController');
 
