@@ -28,7 +28,7 @@ function tiempo() { //función del temporizador
     cs = Math.round(cs)
     sg = cr.getSeconds(); //segundos del cronómetro
     mn = cr.getMinutes(); //minutos del cronómetro
-    
+
     if (cs < 10) {
         cs = "0" + cs;
     }  //poner siempre 2 cifras en los números
@@ -38,7 +38,7 @@ function tiempo() { //función del temporizador
     if (mn < 10) {
         mn = "0" + mn;
     }
-    visor.innerHTML =  mn + " : " + sg + " : " + cs; //pasar a pantalla.
+    visor.innerHTML = mn + " : " + sg + " : " + cs; //pasar a pantalla.
 }
 //parar el cronómetro
 function parar() {
@@ -69,26 +69,59 @@ function reiniciar() {
     visor.innerHTML = "00 : 00 : 00"; //visor a cero
 }
 var contadorCaptura = 0;
-function capturarTempo(){
+function capturarTempo() {
     contadorCaptura++;
     parar();
     tempoCapturado = $('#reloj').html();
     reiniciar();
     empezar();
-    
+
     elemento = "Elemento teste";
-    
+
     // cria uma nova linha na tabela.
     linha = "<tr>\n\
-             <td>"+contadorCaptura+"</td>\n\
-             <td>"+elemento+"</td>\n\
-             <td>"+tempoCapturado+"</td>\n\
+             <td>" + contadorCaptura + "</td>\n\
+             <td>" + elemento + "</td>\n\
+             <td>" + tempoCapturado + "</td>\n\
              </th>";
-     //Plota na tabela
-     $('#corpoTabela').append(linha);
-    
+    //Plota na tabela
+    $('#corpoTabela').append(linha);
+
     //Enviar via Ajax.
-    console.log("Cronômetro "+contadorCaptura+":  "+tempoCapturado);
-    
-    
+    console.log("Cronômetro " + contadorCaptura + ":  " + tempoCapturado);
+}
+
+var tomadaTempo = null;
+function getTomadaTempo(codTomadaTempo) {
+    $.ajax({
+        method: 'get',
+        url: '/cronometragem/get-tomada-tempo',
+        data: 'cod='+codTomadaTempo,
+        dataType: 'json',
+        success: function (data) {
+           tomadaTempo = data;
+
+        },
+        error: function (argument) {
+            //mensagem erro
+            alert('Falha ao obter dados');
+        }
+    });
+}
+var elementos = null;
+function getElementos(codOperacao) {
+    $.ajax({
+        method: 'get',
+        url: '/cronometragem/get-elementos',
+        data: 'cod='+codOperacao,
+        dataType: 'json',
+        success: function (data) {
+           elementos = data;
+
+        },
+        error: function (argument) {
+            //mensagem erro
+            alert('Falha ao obter dados');
+        }
+    });
 }
