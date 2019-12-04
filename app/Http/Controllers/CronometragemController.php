@@ -10,4 +10,12 @@ class CronometragemController extends Controller
     {
         return view('cronometragem.index');
     }
+    
+    public function getTomadaTempo(){
+        $codigTomadaTempo = $_GET ['cod'];
+        $tomada = \App\TomadaDeTempo::where('codTomadaDeTempo','=', $codigTomadaTempo)->get();
+        return $tomada[0];
+    }
+    
+    
 }
