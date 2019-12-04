@@ -89,13 +89,13 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `sistemaCrono`.`cronometragem` (
   `codTomadaDeTempo` INT NOT NULL,
-  `tempo` FLOAT NULL,
+  `tempo` VARCHAR(8) NOT NULL,
   `numCronometragem` INT NOT NULL,
   `codElemento` INT NOT NULL,
 `created_at` DATETIME NULL,
   `updated_at` DATETIME NULL,
 
-  PRIMARY KEY (`codTomadaDeTempo`))
+  PRIMARY KEY (`codTomadaDeTempo`, `numCronometragem`, `codElemento`))
 ENGINE = InnoDB;
 
 

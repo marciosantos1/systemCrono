@@ -77,7 +77,8 @@
                     <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fas fa-fw fa-tachometer-alt"></i>
                         <span>Operações</span>
-                    </a> <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="pagesDropdown">
                         <a class="dropdown-item" href="{{url('/')}}/operacao/create">Cadastro operações</a>
                         <a class="dropdown-item" href="{{url('/')}}/elemento/create">Cadastro elemento</a>
                         <a class="dropdown-item" href="{{url('/')}}/operacao">Listar</a>
@@ -92,6 +93,9 @@
                         <i class="fas fa-clipboard"></i>
                         <span>Relatórios</span>
                     </a>
+                    <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                        <a class="dropdown-item" href="{{url('/')}}/cronometragem">cronometragem</a>
+                        
                 </li>
 
 
