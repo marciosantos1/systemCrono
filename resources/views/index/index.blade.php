@@ -8,19 +8,17 @@
 <script>  
      function mostrarMenu(){          
           
-               $("#pagesDropdown").show();
+               $("#menus").show();
                          
        }
               </script>
               <style>
                   
-                  #pagesDropdown{
+                  #menus{
                   
-                     display: none;
+                     display:none;
                   }
-                  #login{
-                      display:1;
-                  }
+                  
               </style>
               <div class="text-center" id="login" > 
             
@@ -42,7 +40,7 @@
                                 </div>
                             </div>
                             
-                            <a onclick="return mostrarMenu() "class="btn btn-primary btn-block" >Login</a>
+                            <a onclick="return mostrarMenu(); "class="btn btn-primary btn-block" >Login</a>
                         </form>
                         <div class="text-center">
                             <a class="d-block small mt-3" href="{{url('/')}}/usuario/create">Registrar-se Aqui</a>                           

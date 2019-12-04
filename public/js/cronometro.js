@@ -6,6 +6,10 @@ window.onload = function () {
     document.cron.continua.onclick = continuar;
     document.cron.reinicia.onclick = reiniciar;
     document.cron.proximo.onclick = capturarTempo;
+    
+    // OBTÉM A TOMADA DE TEMPO E OS ELEMENTOS.
+    getTomadaTempo(1);
+    getElemento(1);
 }
 //variables de inicio:
 var marcha = 0; //control del temporizador
@@ -69,29 +73,62 @@ function reiniciar() {
     visor.innerHTML = "00 : 00 : 00"; //visor a cero
 }
 var contadorCaptura = 0;
-function capturarTempo(){
-    contadorCaptura++;
+var contadorElemento = 0;
+  function capturarTempo(){
+    if(contadorElemento == elementos.length){
+        contadorElemento = 0;
+    }
     parar();
     tempoCapturado = $('#reloj').html();
+    contadorCaptura++;
     reiniciar();
     empezar();
     
-    elemento = "Elemento teste";
+    elemento = elementos[contadorElemento];
     
     // cria uma nova linha na tabela.
     linha = "<tr>\n\
-             <td>"+contadorCaptura+"</td>\n\
-             <td>"+elemento+"</td>\n\
-             <td>"+tempoCapturado+"</td>\n\
+             <td>"+ contadorCaptura +"</td>\n\
+             <td>"+ elemento.nomeElemento +"</td>\n\
+             <td>"+ tempoCapturado +"</td>\n\
              </th>";
      //Plota na tabela
      $('#corpoTabela').append(linha);
     
     //Enviar via Ajax.
     console.log("Cronômetro "+contadorCaptura+":  "+tempoCapturado);
+    registrarTempo(contadorCaptura,tomadaTempo.codTomadaDeTempo, elemento.codElemento, tempoCapturado);
     
+    contadorElemento++;
+    
+    //Encerra o cronômetro
+    if(contadorCaptura>= (elementos.length * tomadaTempo.numLeitura)){
+        parar();
+        $('#proximo').attr('disabled', 'true');
+        
+    }
     
 }
+function registrarTempo(numCronometragem, codTomadaDeTempo, codElemento, tempo){
+  
+  $.ajax({
+    method: 'get',
+    url: '/cronometragem/guardar',
+    data: 'numCronometragem='+numCronometragem+'&codTomadaDeTempo='+codTomadaDeTempo+'&codElemento='+codElemento+'&tempo='+tempo+'',
+    dataType: 'json',
+    success: function (data){
+    //mensagem sucesso
+    console.log('Leitura armazenada - '+numCronometragem);
+    
+    },
+    error: function(argument){
+    //mensagem erro
+    alert('Falha ao obter dados');
+    }
+    });
+    
+}
+
 var tomadaTempo = null;
 function getTomadaTempo(codTomadaTempo){
     
@@ -112,7 +149,7 @@ function getTomadaTempo(codTomadaTempo){
     });
    
     }
-    var elemento = null;
+    var elementos = null;
     function getElemento(codOperacao){
     
     $.ajax({
@@ -122,7 +159,7 @@ function getTomadaTempo(codTomadaTempo){
     dataType: 'json',
     success: function (data){
     //mensagem sucesso
-    elemento = data;
+    elementos = data;
     
     },
     error: function(argument){

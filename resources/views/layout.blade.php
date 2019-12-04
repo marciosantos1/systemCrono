@@ -44,10 +44,10 @@
         </nav>
 
         <div id="wrapper">
-
+             <div id="menus">
             <!-- Sidebar -->
             <ul class="sidebar navbar-nav">
-
+                  
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="login.html" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fas fa-fw fa-user-circle"></i>
@@ -98,7 +98,7 @@
 
 
             </ul>
-
+                  </div>
             <div class="container-fluid"> 
 
                 <!--Conteudo da Pagina-->

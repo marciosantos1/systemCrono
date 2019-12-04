@@ -26,13 +26,13 @@ class CronometragemController extends Controller {
         $cronometragem = new \App\Cronometragem();
 
         //num leitura
-        $cronometragem->numCronometragem = $request->get('numCronometragem');
+        $cronometragem->numCronometragem = $_GET['numCronometragem'];
 
         //cod tomadatempo
-        $cronometragem->codTomadaDeTempo = $request->get('codTomadaDeTempo');
+        $cronometragem->codTomadaDeTempo = $_GET['codTomadaDeTempo'];
 
         // cod elemento
-        $cronometragem->codElemento = $request->get('codElemento');
+        $cronometragem->codElemento = $_GET['codElemento'];
 
         // tempo - normalização de dados
         $tempo = $request->get('tempo');

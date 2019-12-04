@@ -23,6 +23,21 @@
     return href="{{route('usuario.index')}}";
     }
     
+    
+    function mostrarMenu(){          
+          
+               $("#menus").show();
+                         
+       }
+              </script>
+              <style>
+                  
+                  #menus{
+                  
+                     display:none;
+                  }
+                  
+              </style>
 </script>
 
 <div class="text-center" > 
