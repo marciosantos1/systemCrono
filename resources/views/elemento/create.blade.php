@@ -29,8 +29,9 @@
             dataType: 'html',
             success: function (data) {
                 //mensagem socesso
+                
                 alert('Elementos cadastrados com socesso');
-               
+                location.href = '{{route('operacao.index')}}';
             },
             error: function (argument) {
                 //mensagem erro
@@ -51,7 +52,7 @@
         <div class="card-body">
             <div class="table-responsive">
                 <div class="text-center" >Cadastro de elementos</div>
-                <div class="text-center">Elemnto:{{$p->nomeOperacao}} Cod:{{$p->codOperacao}}</div>
+                <div class="text-center">Operação: {{$p->nomeOperacao}} Cod:{{$p->codOperacao}}</div>
                 <br>
                 <table>
 

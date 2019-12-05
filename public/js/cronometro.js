@@ -6,6 +6,11 @@ window.onload = function () {
     document.cron.continua.onclick = continuar;
     document.cron.reinicia.onclick = reiniciar;
     document.cron.proximo.onclick = capturarTempo;
+
+    //Obtem a tomada de tempo e os elementos
+    getTomadaTempo(1);
+    getElementos(1);
+
 }
 //variables de inicio:
 var marcha = 0; //control del temporizador
@@ -69,19 +74,25 @@ function reiniciar() {
     visor.innerHTML = "00 : 00 : 00"; //visor a cero
 }
 var contadorCaptura = 0;
+var contadorElemento = 0;
 function capturarTempo() {
-    contadorCaptura++;
+    //Verifica se precissa zerar contador de elementos
+    if (contadorElemento == elementos.length) {
+        contadorElemento = 0;
+    }
+
     parar();
     tempoCapturado = $('#reloj').html();
+    contadorCaptura++;
     reiniciar();
     empezar();
 
-    elemento = "Elemento teste";
+    elemento = elementos[contadorElemento];
 
     // cria uma nova linha na tabela.
     linha = "<tr>\n\
              <td>" + contadorCaptura + "</td>\n\
-             <td>" + elemento + "</td>\n\
+             <td>" + elemento.nomeElemento + "</td>\n\
              <td>" + tempoCapturado + "</td>\n\
              </th>";
     //Plota na tabela
@@ -89,6 +100,7 @@ function capturarTempo() {
 
     //Enviar via Ajax.
     console.log("Cronômetro " + contadorCaptura + ":  " + tempoCapturado);
+    contadorElemento++;
 }
 
 var tomadaTempo = null;
@@ -96,10 +108,10 @@ function getTomadaTempo(codTomadaTempo) {
     $.ajax({
         method: 'get',
         url: '/cronometragem/get-tomada-tempo',
-        data: 'cod='+codTomadaTempo,
+        data: 'cod=' + codTomadaTempo,
         dataType: 'json',
         success: function (data) {
-           tomadaTempo = data;
+            tomadaTempo = data;
 
         },
         error: function (argument) {
@@ -108,15 +120,16 @@ function getTomadaTempo(codTomadaTempo) {
         }
     });
 }
+
 var elementos = null;
 function getElementos(codOperacao) {
     $.ajax({
         method: 'get',
         url: '/cronometragem/get-elementos',
-        data: 'cod='+codOperacao,
+        data: 'cod=' + codOperacao,
         dataType: 'json',
         success: function (data) {
-           elementos = data;
+            elementos = data;
 
         },
         error: function (argument) {

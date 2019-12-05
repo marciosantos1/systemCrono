@@ -28,15 +28,13 @@
 
 <div class="container-fluid">
 
-
-
     <!-- Tabela de listar -->
     <div class="card mb-3">
         <div class="card-header">
             <i class="fas fa-table"></i>
             Lista de Operações</div>
         <div class="card-body">
-            <div class="table-responsive">
+            <div class="table-sm">
                 <table class="table table-bordered form-control-file" id="dataTable" width="100%" cellspacing="0">
                     <thead >
                         <tr>
@@ -46,7 +44,6 @@
                             <th>Tipo estudo</th>
                             <th>Cronometrista</th>
                             <th>Opção</th>
-
 
                         </tr>
                     </thead>
@@ -81,4 +78,5 @@
     </div>
 
 </div>
+
 @stop
