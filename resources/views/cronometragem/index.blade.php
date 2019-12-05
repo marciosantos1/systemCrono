@@ -16,7 +16,7 @@
                 <input type="button" value="Continuar" name="continua" />
                 <input type="button" value="Reiniciar" name="reinicia" />               
                 </br></br>
-                <input style="background-color: #17a2b8" type="button"  value="Próximo >>" name="proximo" />               
+                <input style="background-color: #17a2b8" type="button"  value="Próximo >>" name="proximo" id="proximo" />               
             </form>
 
 

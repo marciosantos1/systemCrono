@@ -17,7 +17,7 @@ Route::get('/','IndexController@index');
 Route::get('/cronometragem','CronometragemController@index');
 Route::get('/cronometragem/get-tomada-tempo','CronometragemController@getTomadaTempo');
 Route::get('/cronometragem/get-elementos','CronometragemController@getElementos');
-Route::post('/cronometragem/guardar','CronometragemController@guardar');
+Route::get('/cronometragem/guardar','CronometragemController@guardar');
 
 //Crud's
 Route::resource('operacao','OperacaoController');   

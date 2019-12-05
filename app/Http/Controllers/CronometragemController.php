@@ -22,16 +22,16 @@ class CronometragemController extends Controller {
         return $elemento;
     }
 
-    public function guardar(Request $request) {
+    public function guardar() {
         $cronometragem = new \App\Cronometragem();
         //numero leitura
-        $cronometragem->numCronometragem = $request->get('numCronometragem');
+        $cronometragem->numCronometragem = $_GET['numCronometragem'];
         //codigo da tomada de tempo
-        $cronometragem->codTomadaDeTempo = $request->get('codTomadaDeTempo');
+        $cronometragem->codTomadaDeTempo = $_GET['codTomadaDeTempo'];
         //codigo elemento
-        $cronometragem->codElemento = $request->get('codElemento');
+        $cronometragem->codElemento = $_GET['codElemento'];
         //normatizaçao de dados
-        $tempo = $request->get('tempo');
+        $tempo = $request-$_GET['tempo'];
         $tempo = str_replace(' ', '', $tempo);
         $cronometragem->tempo = $tempo;
         //Salva a cronometragem

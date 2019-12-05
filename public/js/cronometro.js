@@ -7,6 +7,8 @@ window.onload = function () {
     document.cron.reinicia.onclick = reiniciar;
     document.cron.proximo.onclick = capturarTempo;
 
+
+    //ira receber uma variavel
     //Obtem a tomada de tempo e os elementos
     getTomadaTempo(1);
     getElementos(1);
@@ -100,7 +102,34 @@ function capturarTempo() {
 
     //Enviar via Ajax.
     console.log("Cronômetro " + contadorCaptura + ":  " + tempoCapturado);
+    registrarTempo(contadorCaptura, tomadaTempo.codTomadaDeTempo, elemento.codElemento, tempoCapturado);
+    
     contadorElemento++;
+    
+    //encera o cronometro
+    if(contadorCaptura >= (elementos.length *tomadaTempo.numLeitura)){
+        parar();
+        $('#proximo').attr('disabled', 'true');
+    }
+}
+
+function registrarTempo(numCronometragem, codTomadaDeTempo, codElemento, tempo){
+    
+     $.ajax({
+        method: 'post',
+        url: '/cronometragem/guardar',
+        data: 'numCronometragem='+numCronometragem+'&codTomadaDeTempo='+codTomadaDeTempo+'&codElemento='+codElemento+'&tempo='+tempo,
+        dataType: 'json',
+        success: function (data) {
+          console.log('leitu armazenada -  '+numCronometragem);
+
+        },
+        error: function (argument) {
+            //mensagem erro
+            alert('Falha ao obter dados');
+        }
+    });
+    
 }
 
 var tomadaTempo = null;
