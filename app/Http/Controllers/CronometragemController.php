@@ -31,13 +31,13 @@ class CronometragemController extends Controller {
         //codigo elemento
         $cronometragem->codElemento = $_GET['codElemento'];
         //normatizaçao de dados
-        $tempo = $request-$_GET['tempo'];
+        $tempo = $_GET['tempo'];
         $tempo = str_replace(' ', '', $tempo);
         $cronometragem->tempo = $tempo;
         //Salva a cronometragem
         $cronometragem->save();
         
-        return true;
+        return "true";
     }
 
 }

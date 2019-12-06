@@ -44,7 +44,7 @@
         </nav>
 
         <div id="wrapper">
-
+ <div id="menus">
             <!-- Sidebar -->
             <ul class="sidebar navbar-nav">
 
@@ -100,7 +100,7 @@
 
 
             </ul>
-
+</div>
             <div class="container-fluid"> 
 
                 <!--Conteudo da Pagina-->

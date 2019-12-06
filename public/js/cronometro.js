@@ -1,19 +1,4 @@
-window.onload = function () {
-    visor = document.getElementById("reloj"); //localizar pantalla del reloj
-    //asociar eventos a botones: al pulsar el botón se activa su función.
-    document.cron.empieza.onclick = empezar;
-    document.cron.para.onclick = parar;
-    document.cron.continua.onclick = continuar;
-    document.cron.reinicia.onclick = reiniciar;
-    document.cron.proximo.onclick = capturarTempo;
 
-
-    //ira receber uma variavel
-    //Obtem a tomada de tempo e os elementos
-    getTomadaTempo(1);
-    getElementos(1);
-
-}
 //variables de inicio:
 var marcha = 0; //control del temporizador
 var cro = 0; //estado inicial del cronómetro.
@@ -116,7 +101,7 @@ function capturarTempo() {
 function registrarTempo(numCronometragem, codTomadaDeTempo, codElemento, tempo){
     
      $.ajax({
-        method: 'post',
+        method: 'get',
         url: '/cronometragem/guardar',
         data: 'numCronometragem='+numCronometragem+'&codTomadaDeTempo='+codTomadaDeTempo+'&codElemento='+codElemento+'&tempo='+tempo,
         dataType: 'json',
