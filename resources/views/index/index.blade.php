@@ -58,7 +58,7 @@
                         </div>
                     </div>
 
-                    <a onclick="return mostrarMenu();"class="btn btn-primary btn-block" >Login</a>
+                    <a onclick="return mostrarMenu();" class="btn btn-primary btn-block" >Login</a>
 
                     <div class="text-center">
                         <a class="d-block small mt-3" href="{{url('/')}}/usuario/create">Registrar-se Aqui</a>                           

@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
 class CronometragemController extends Controller {
 
     public function index() {
-        return view('cronometragem.index');
+        $tomada = \App\TomadaDeTempo::get();
+        return view('cronometragem.index', compact('tomada'));
     }
 
     public function getTomadaTempo() {
@@ -36,7 +37,7 @@ class CronometragemController extends Controller {
         $cronometragem->tempo = $tempo;
         //Salva a cronometragem
         $cronometragem->save();
-        
+
         return "true";
     }
 
